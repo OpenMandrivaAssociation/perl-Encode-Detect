@@ -15,7 +15,6 @@ Buildrequires:  perl-devel
 Buildrequires:  perl(Module::Build)
 Buildrequires:  perl(ExtUtils::CBuilder)
 Buildrequires:  perl(Data::Dump)
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 This Perl module is an Encode::Encoding subclass that uses
