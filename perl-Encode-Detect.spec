@@ -1,7 +1,7 @@
 %define module  Encode-Detect
 %define name    perl-%{module}
-%define version 1.00
-%define release %mkrel 3
+%define version 1.01
+%define release %mkrel 1
 
 Name:           %{name}
 Version:        %{version}
