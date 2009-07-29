@@ -1,21 +1,21 @@
-%define module  Encode-Detect
-%define name    perl-%{module}
-%define version 1.01
-%define release %mkrel 3
+%define upstream_name    Encode-Detect
+%define upstream_version 1.01
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release} 
-Summary:        An Encode::Encoding subclass that detects the encoding of data
-License:        GPL
-Group:          Development/Perl
-URL:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Encode/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    An Encode::Encoding subclass that detects the encoding of data
+License:    GPL
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Encode/%{upstream_name}-%{upstream_version}.tar.bz2
+
 Buildrequires:  perl-devel
 Buildrequires:  perl(Module::Build)
 Buildrequires:  perl(ExtUtils::CBuilder)
 Buildrequires:  perl(Data::Dump)
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This Perl module is an Encode::Encoding subclass that uses
@@ -27,7 +27,7 @@ of expected encodings. Like Encode::Guess, it only supports decoding--it cannot
 encode.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -49,5 +49,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Encode
 %{perl_vendorarch}/auto/Encode
 %{_mandir}/*/*
-
-
