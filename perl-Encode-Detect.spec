@@ -9,6 +9,7 @@ License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Encode/%{modname}-%{modver}.tar.bz2
+Buildrequires:	perl(Test::More)
 Buildrequires:	perl-devel
 Buildrequires:	perl(Module::Build)
 Buildrequires:	perl(ExtUtils::CBuilder)
