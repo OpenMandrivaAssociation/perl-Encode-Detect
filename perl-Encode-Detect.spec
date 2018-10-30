@@ -4,7 +4,7 @@
 Summary:	An Encode::Encoding subclass that detects the encoding of data
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	20
+Release:	21
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
