@@ -1,13 +1,14 @@
 %define modname	Encode-Detect
 %define modver	1.01
+%define debug_package %{nil}
 
 Summary:	An Encode::Encoding subclass that detects the encoding of data
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	24
+Release:	25
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		http://metacpan.org/pod/Encode::Detect
 Source0:	http://www.cpan.org/modules/by-module/Encode/%{modname}-%{modver}.tar.bz2
 Buildrequires:	perl(Test::More)
 Buildrequires:	perl-devel
@@ -25,7 +26,7 @@ of expected encodings. Like Encode::Guess, it only supports decoding--it cannot
 encode.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
 %{__perl} Build.PL installdirs=vendor
