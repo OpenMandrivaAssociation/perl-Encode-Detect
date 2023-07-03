@@ -5,7 +5,7 @@
 Summary:	An Encode::Encoding subclass that detects the encoding of data
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	26
+Release:	27
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Encode::Detect
