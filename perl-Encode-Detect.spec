@@ -8,7 +8,7 @@ Version:	%perl_convert_version %{modver}
 Release:	27
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Encode::Detect
+Url:		https://metacpan.org/pod/Encode::Detect
 Source0:	http://www.cpan.org/modules/by-module/Encode/%{modname}-%{modver}.tar.bz2
 Buildrequires:	perl(Test::More)
 Buildrequires:	perl-devel
